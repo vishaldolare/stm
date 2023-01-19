@@ -1,0 +1,34 @@
+{
+  "data": [
+  {
+    "direction": "north",
+    "signal": "green",
+    "duration": 10,
+    "waiting_duration": 10,
+    "order": 1
+  },
+  {
+    "direction": "east",
+    "signal": "green",
+    "duration": 10,
+    "waiting_duration": 5,
+    "order": 2
+  },
+  {
+    "direction": "south",
+    "signal": "green",
+    "duration": 50,
+    "waiting_duration": 24,
+    "order": 3
+  },
+  {
+    "direction": "west",
+    "signal": "green",
+    "duration": 19,
+    "waiting_duration": 22,
+    "order": 4
+  }
+],
+
+"totalDuration": 50000
+}

@@ -1,0 +1,22 @@
+<div>
+  <div id="box2">
+    <div class="arrow">
+      <i class="fas fa-angle-double-left  fa-2x green arrow-icon"
+        [ngClass]="{ checked: arrow.left && lights?.isGreen }"></i>
+    </div>
+    <div class="arrow">
+      <i class="fas fa-angle-double-up  fa-2x green arrow-icon"
+        [ngClass]="{ checked: arrow.up && lights?.isGreen }"></i>
+    </div>
+    <div class="arrow">
+      <i class="fas fa-angle-double-right  fa-2x green arrow-icon"
+        [ngClass]="{ checked: arrow.right && lights?.isGreen }"></i>
+    </div>
+  </div>
+  <div id="box">
+    <div class="light red-light red" [ngClass]="{ checked: lights?.isRed }"></div>
+    <div class="light yellow-light yellow" [ngClass]="{ checked: lights?.isYellow }"></div>
+    <div class="light green-light green" [ngClass]="{ checked: lights?.isGreen }">{{lights?.isGreen ? time :
+      ""}}{{lights?.isGreen ? '/' : ''}}{{lights?.isGreen ? totalTime :''}}</div>
+  </div>
+</div>

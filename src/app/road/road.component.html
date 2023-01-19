@@ -1,0 +1,297 @@
+<div class="wrapper">
+
+	
+	
+	<div class="top">
+		<div class="road-direction-label-north">North</div>
+
+			<div [ngClass]="{'animation-top':setDirection?.lights_top?.isGreen}" class="top-stop">
+
+				<img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+				<img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+				<img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+				<img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+				<img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+				<img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+                <img src="/././assets/car-down.png" alt="car" class="car-width"  class="mt-10 car-width" />
+
+			</div>
+
+			<div [ngClass]="{'animation-bottom':setDirection?.lights_bottom?.isGreen}" class="bottom-stop">
+
+				<img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+				<img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+				<img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+				<img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+				<img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+				<img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+                <img src="/././assets/car-up.png" alt="car" class="mt-10 car-width" />
+
+			</div>
+			<div class="top-red-border red-border"></div>
+			<div class="top-red-border-bottom red-border"></div>
+			<div class="road-direction-label-south">South</div>
+	</div>
+	<div class="left-wrapper">
+		<div class="road-side-bg-top"></div>
+		<div class="left">
+			<div class="road-direction-label-west">West</div>
+			<div [ngClass]="{'animation-left':setDirection?.lights_left?.isGreen}" class="left-stop">
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+				<img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+                <img src="/././assets/car.png" alt="car" class="mr-10 car-width" />
+
+			</div>
+
+			<div [ngClass]="{'animation-right':setDirection?.lights_right?.isGreen}" class="right-stop">
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+				<img src="/././assets/car-right.png" alt="car"  class="ml-10 car-width" />
+
+			</div>
+			<div class="left-red-border red-border"></div>
+			<div class="left-red-border-bottom red-border"></div>
+			<div class="road-direction-label-east">East</div>
+		</div>
+		<div class="road-side-bg-left"></div>
+	</div>
+	
+	
+    <div class="center ">
+		<!-- <div style="margin-top: 128px; margin-left: 170px ;">
+			<div class="timer">
+				<h2 style="margin-left: 5px ;margin-top:15px;padding: 10%;">{{timeLeft}}</h2>
+			</div>
+		</div> -->
+        <div class="signal-light-left">
+
+            <!-- <div class="green-light green-active"></div>
+
+            <div class="yellow-light"></div>
+
+            <div class="red-light"></div> -->
+
+            <div class="container_3">
+
+                <app-traffic-signal  [lights]="setDirection?.lights_left" [time]="timeLeft" [totalTime]="totalTime"></app-traffic-signal>
+
+            </div>
+
+           
+
+        </div>
+
+        <div class="signal-light-right">
+
+            <!-- <div class="green-light-right green-active"></div>
+
+
+
+            <div class="yellow-light-right"></div>
+
+            <div class="red-light-right"></div> -->
+
+            <div class="container_2">
+
+                <app-traffic-signal [lights]="setDirection?.lights_right" [time]="timeLeft" [totalTime]="totalTime"></app-traffic-signal>
+				
+            </div>
+
+        </div>
+		
+        <div class="signal-light-top">
+
+            <!-- <div class="green-light-top"></div>
+
+            <div class="yellow-light-top"></div>
+
+            <div class="red-light-top red-active"></div> -->
+
+            <div class="container_4 ">
+
+                <app-traffic-signal [lights]="setDirection?.lights_top" [time]="timeLeft" [totalTime]="totalTime"></app-traffic-signal>
+
+            </div>
+
+        </div>
+		
+        <div class="signal-light-bottom">
+
+            <!-- <div class="green-light-bottom"></div>
+
+            <div class="yellow-light-bottom"></div>
+
+            <div class="red-light-bottom red-active"></div> -->
+
+            <div class="container">
+
+                <app-traffic-signal  [lights]="setDirection?.lights_bottom" [time]="timeLeft" [totalTime]="totalTime"></app-traffic-signal>
+
+            </div>
+
+        </div>
+
+        <div class="zebra-crossing-right">
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+        </div>
+		<!-- <div class="road-direction-East road-direction-E">
+			<div class="East">
+				North
+			</div>
+		</div> -->
+
+		
+        <div class="zebra-crossing-left">
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line.png" alt="Zebra Crossing" />
+
+        </div>
+		<!-- <div class="road-direction-West road-direction-W">
+			<div class="West">
+				East
+			</div>
+		</div> -->
+
+        <div class="zebra-crossing-bottom">
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+        </div>
+		<!-- <div class="road-direction-South road-direction-S">
+			<div class="South">
+				West
+			</div>
+		</div> -->
+        <div class="zebra-crossing-top">
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+            <img src="/././assets/line-v.png" alt="Zebra Crossing" />
+
+        </div>
+		<!-- <div class="road-direction-North road-direction-N">
+			<div class="North">
+				South
+			</div>
+		</div> -->
+    </div>
+	
+    <!-- <div class="bottom"></div> -->
+
+    <!-- <div class="right"></div> -->
+
+</div>
