@@ -1,0 +1,30 @@
+[
+    {
+      "direction": "north",
+      "signal": "green",
+      "duration": 20,
+      "waiting_duration": 0,
+      "order": 1
+    },
+    {
+      "direction": "east",
+      "signal": "green",
+      "duration": 19,
+      "waiting_duration": 20,
+      "order": 2
+    },
+    {
+      "direction": "south",
+      "signal": "green",
+      "duration": 19,
+      "waiting_duration": 39,
+      "order": 3
+    },
+    {
+      "direction": "west",
+      "signal": "green",
+      "duration": 19,
+      "waiting_duration": 58,
+      "order": 4
+    }
+  ]
